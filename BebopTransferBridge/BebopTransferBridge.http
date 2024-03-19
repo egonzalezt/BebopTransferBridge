@@ -1,0 +1,6 @@
+@BebopTransferBridge_HostAddress = http://localhost:5036
+
+GET {{BebopTransferBridge_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
