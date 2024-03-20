@@ -32,7 +32,7 @@ public class TransferController(IMessageSender messageSender, IOptions<BebopTran
             UserEmail = userInfo.Email,
             UserId = userInfo.UserId,
         };
-        var headers = new Headers(EventTypes.TransferUser.ToString());
+        var headers = new Headers(EventTypes.TransferUser.ToString(), userInfo.UserId);
         messageSender.SendMessage(userTransfer, _exchange.TransferUserQueue, headers.GetAttributesAsDictionary());
         return Ok(user);
     }

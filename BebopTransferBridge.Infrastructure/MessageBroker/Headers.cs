@@ -3,8 +3,9 @@
 using System;
 using System.Collections.Generic;
 
-public class Headers(string messageType)
+public class Headers(string messageType, Guid userId)
 {
+    public Guid UserId { get; set; } = userId;
     public Guid MessageId { get; set; } = Guid.NewGuid();
     public string EventType { get; set; } = messageType;
     public string Timestamp { get; set; } = DateTimeOffset.UtcNow.ToString("o");
