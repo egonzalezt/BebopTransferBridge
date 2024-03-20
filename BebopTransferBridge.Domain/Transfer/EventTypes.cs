@@ -3,5 +3,6 @@
 public enum EventTypes
 {
     TransferUser,
-    NewUserFromTransfer
+    NewUserFromTransfer,
+    TransferCompleteFromExternalOperator
 }
